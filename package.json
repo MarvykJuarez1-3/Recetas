@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",  // Script que ejecutará Render al iniciar tu app
-    "build": ""  // Puedes dejar esto vacío si no usas un proceso de build
+    "start": "node app.js",  
+    "build": ""  
   },
   "keywords": [],
   "author": "",
