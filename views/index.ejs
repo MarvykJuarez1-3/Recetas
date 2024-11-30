@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recetas Populares</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Recetas Populares</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#tarta_de_manzana">Tarta de Manzana</a></li>
+        <li><a href="#pizza_margarita">Pizza Margarita</a></li>
+        <li><a href="#ensalada_cesar">Ensalada César</a></li>
+        <li><a href="#sopa_de_tomate">Sopa de Tomate</a></li>
+        <li><a href="#brownie_de_chocolate">Brownie de Chocolate</a></li>
+        <li><a href="#galletas_de_avena">Galletas de Avena</a></li>
+        <li><a href="#spaghetti_bolognese">Spaghetti Bolognese</a></li>
+        <li><a href="#pollo_al_curry">Pollo al Curry</a></li>
+        <li><a href="#muffins_de_arandano">Muffins de Arándano</a></li>
+        <li><a href="#lasana_vegetariana">Lasaña Vegetariana</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="recetas-lista">
+        <% recetas.forEach(function(receta) { %>
+          <div class="receta" id="<%= receta.nombre.replace(/ /g, '_').toLowerCase() %>">
+            <h2><%= receta.nombre %></h2>
+            <img src="<%= receta.imagen_url %>" alt="<%= receta.nombre %>" style="width: 100%; height: auto;"/>
+            <p><%= receta.descripcion %></p>
+            <p><strong>Ingredientes:</strong> <%= receta.ingredientes %></p>
+            <p><strong>Instrucciones:</strong> <%= receta.instrucciones %></p>
+            <p><strong>Tiempo de Preparación:</strong> <%= receta.tiempo_preparacion %> minutos</p>
+            
+            <!-- Botones de navegación -->
+            <a href="/" class="boton">Ir al Inicio</a>
+            <a href="https://www.youtube.com/" class="boton" target="_blank">Ver recetas en YouTube</a>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </main>
+  
+
+  <footer>
+    <p>Recetas Web | Hecho por Marvyk Vanesa Mayoral Juárez </p>
+  </footer>
+</body>
+</html>

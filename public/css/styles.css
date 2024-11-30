@@ -1,0 +1,221 @@
+/* Colores definidos para la paleta */
+:root {
+  --color-fondo-principal: #FFFFFF;
+  --color-fondo-secundario: #ffffff;
+  --color-texto-principal: #333333;
+  --color-titulo: #495816;
+  --color-boton: #495816;
+  --color-enlace: #1f0900;
+}
+
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-fondo-principal);
+  color: var(--color-texto-principal);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: var(--color-fondo-secundario);
+  color: var(--color-titulo);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: var(--color-texto-principal);
+  margin-top: 0;
+}
+
+/* Navegación */
+header nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin-top: 20px;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  color: var(--color-enlace);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Sección de botones en el home page */
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.home-buttons .boton {
+  display: inline-block;
+  background-color: var(--color-boton);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.home-buttons .boton:hover {
+  background-color: darken(var(--color-boton), 10%);
+}
+
+/* Recetas */
+.recetas-lista {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--color-fondo-secundario);
+  border-radius: 8px;
+}
+
+.receta {
+  background-color: #fffafaab;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.receta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.receta img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.receta h2 {
+  font-size: 1.8rem;
+  margin: 10px 0;
+  color: var(--color-titulo);
+}
+
+.receta p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Botones */
+.boton {
+  display: inline-block;
+  background-color: var(--color-boton);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.boton:hover {
+  background-color: darken(var(--color-boton), 10%);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 0rem;
+  background-color: var(--color-fondo-secundario);
+  color: var(--color-texto-principal);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  
+}
+/* Home Page específico */
+body.home-page {
+  background: url('https://recetascreativas.wordpress.com/wp-content/uploads/2016/02/img_4817-01.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--color-fondo-principal); /* Texto en blanco para destacar sobre el fondo */
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 2rem;
+  text-align: justify;
+  background: rgba(22, 22, 22, 0.6); /* Fondo oscuro semitransparente */
+  border-radius: 10px;
+}
+
+.home-container h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--color-fondo-principal); /* Texto blanco */
+}
+
+.home-container p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+  color: var(--color-fondo-principal);
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home-buttons .boton {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .recetas-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .home-buttons .boton {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
