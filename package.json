@@ -4,9 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js", // Comando para iniciar la aplicación en Render
-    "build": "echo 'No build step needed'", // Script vacío para evitar errores en Render
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",  // Script que ejecutará Render al iniciar tu app
+    "build": ""  // Puedes dejar esto vacío si no usas un proceso de build
   },
   "keywords": [],
   "author": "",
@@ -19,3 +18,4 @@
     "mysql2": "^3.11.5"
   }
 }
+
